@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Puissance 4</h1>
+
+    <form id="config-game">
+        <label>column:</label>
+        <input type="number" id="cols" min="4" max="20" value="7">
+
+        <label>row:</label>
+        <input type="number" id="rows" min="4" max="20" value="6">
+
+        <label>Joueur 1:</label>
+        <input type="text" id="player1-name">
+        <input type="color" id="player1-color" value="#ff0000">
+
+        <label>Joueur 2:</label>
+        <input type="text" id="player2-name">
+        <input type="color" id="player2-color" value="#ffff00">
+
+        <button type="submit" class="btnPlay">play</button>
+    </form>
+
+    <div id="jeu"></div>
+    <div id="scoreboard">
+        <p><span id="player1-name-display">Joueur 1</span> : <span id="score1">0</span></p>
+        <p><span id="player2-name-display">Joueur 2</span> : <span id="score2">0</span></p>
+    </div>
+    <button id="restart">Replay</button>
+
+
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <p id="win-message"></p>
+        </div>
+    </div>
+
+    <script type="module" src="src/main.js" defer></script>
+</body>
+
+</html>
